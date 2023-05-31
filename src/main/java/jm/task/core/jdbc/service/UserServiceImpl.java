@@ -8,15 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    private final UserDaoJDBCImpl userService;
-
-    {
-        try {
-            userService = new UserDaoJDBCImpl();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    private final UserDao userService = new UserDaoJDBCImpl();
 
     public void createUsersTable() {
         userService.createUsersTable();
