@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
-    private static final String Url = "jdbc:mysql://localhost/MyFirstBase";
-    private static final String User = "root";
-    private static final String Password = "1r8C8%XJsSd!";
+    private static final String URL = "jdbc:mysql://localhost/MyFirstBase";
+    private static final String USER = "root";
+    private static final String PASSWORD = "1r8C8%XJsSd!";
     private static Connection connection = null;
 
     public static Connection getConnect() {
         try {
-            return DriverManager.getConnection(Url, User, Password);
+            return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
